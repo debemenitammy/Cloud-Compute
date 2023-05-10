@@ -1,0 +1,22 @@
+<!--navigation-->
+<nav class="navbar navbar-expand-md navbar-light bg-white fixed-top sticky-navigation">
+    <a class="navbar-brand mx-auto" href="index.html">
+        SCORO
+    </a>
+    <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" 
+            data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span data-feather="grid"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+            <% @menu.each do |menu_item| %>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="<%= menu_item.url %>" ><%= menu_item.label %></a>
+                </li>
+            <% end %>
+        </ul>
+        <form class="form-inline">
+            <p class="mb-0 mx-3"><a class="page-scroll font-weight-bold" href="#contact">Work with us</a></p>
+        </form>
+    </div>
+</nav>
